@@ -57,17 +57,30 @@ namespace DrawingStarMethod
             // to draw each side so that it will end up being the number of pixels wide that the user desires.
             float scale = pixels / 207;
 
-            formGraphics.DrawLine(drawPen, 80 * scale + x, 77 * scale + y, 103 * scale + x, 4 * scale + y);
-            formGraphics.DrawLine(drawPen, 103 * scale + x, 4 * scale + y, 126 * scale + x, 78 * scale + y);
-            formGraphics.DrawLine(drawPen, 126 * scale + x, 78 * scale + y, 207 * scale + x, 78 * scale + y);
-            formGraphics.DrawLine(drawPen, 207 * scale + x, 78 * scale + y, 143 * scale + x, 125 * scale + y);
-            formGraphics.DrawLine(drawPen, 143 * scale + x, 125 * scale + y, 167 * scale + x, 197 * scale + y);
-            formGraphics.DrawLine(drawPen, 167 * scale + x, 197 * scale + y, 103 * scale + x, 152 * scale + y);
-            formGraphics.DrawLine(drawPen, 103 * scale + x, 152 * scale + y, 40 * scale + x, 196 * scale + y);
-            formGraphics.DrawLine(drawPen, 40 * scale + x, 196 * scale + y, 63 * scale + x, 123 * scale + y);
-            formGraphics.DrawLine(drawPen, 63 * scale + x, 123 * scale + y, 0 * scale + x, 77 * scale + y);
-            formGraphics.DrawLine(drawPen, 0 * scale + x, 77 * scale + y, 80 * scale + x, 77 * scale + y);
+            //formGraphics.DrawLine(drawPen, 80 * scale + x, 77 * scale + y, 103 * scale + x, 4 * scale + y);
+            //formGraphics.DrawLine(drawPen, 103 * scale + x, 4 * scale + y, 126 * scale + x, 78 * scale + y);
+            //formGraphics.DrawLine(drawPen, 126 * scale + x, 78 * scale + y, 207 * scale + x, 78 * scale + y);
+            //formGraphics.DrawLine(drawPen, 207 * scale + x, 78 * scale + y, 143 * scale + x, 125 * scale + y);
+            //formGraphics.DrawLine(drawPen, 143 * scale + x, 125 * scale + y, 167 * scale + x, 197 * scale + y);
+            //formGraphics.DrawLine(drawPen, 167 * scale + x, 197 * scale + y, 103 * scale + x, 152 * scale + y);
+            //formGraphics.DrawLine(drawPen, 103 * scale + x, 152 * scale + y, 40 * scale + x, 196 * scale + y);
+            //formGraphics.DrawLine(drawPen, 40 * scale + x, 196 * scale + y, 63 * scale + x, 123 * scale + y);
+            //formGraphics.DrawLine(drawPen, 63 * scale + x, 123 * scale + y, 0 * scale + x, 77 * scale + y);
+            //formGraphics.DrawLine(drawPen, 0 * scale + x, 77 * scale + y, 80 * scale + x, 77 * scale + y);
 
+            PointF[] polygon = new PointF[10];
+            polygon[0] = new PointF(80 * scale + x, 77 * scale + y);
+            polygon[1] = new PointF(103 * scale + x, 4 * scale + y);
+            polygon[2] = new PointF(126 * scale + x, 78 * scale + y);
+            polygon[3] = new PointF(207 * scale + x, 78 * scale + y);
+            polygon[4] = new PointF(143 * scale + x, 125 * scale + y);
+            polygon[5] = new PointF(167 * scale + x, 197 * scale + y);
+            polygon[6] = new PointF(103 * scale + x, 152 * scale + y);
+            polygon[7] = new PointF(40 * scale + x, 196 * scale + y);
+            polygon[8] = new PointF(63 * scale + x, 123 * scale + y);
+            polygon[9] = new PointF(0 * scale + x, 77 * scale + y);
+
+            formGraphics.DrawPolygon(drawPen,polygon);
             // TODO put the above points into a PointF array and use DrawPolygon to draw your star
         }
 
@@ -100,7 +113,22 @@ namespace DrawingStarMethod
         public void FillStar(SolidBrush drawBrush, float x, float y, float pixels)
         {
             // TODO create FillStar code here similar to DrawStar code but using FillPolygon instead
+            float scale = pixels / 207;
+            SolidBrush Draw
 
+            PointF[] polygon = new PointF[10];
+            polygon[0] = new PointF(80 * scale + x, 77 * scale + y);
+            polygon[1] = new PointF(103 * scale + x, 4 * scale + y);
+            polygon[2] = new PointF(126 * scale + x, 78 * scale + y);
+            polygon[3] = new PointF(207 * scale + x, 78 * scale + y);
+            polygon[4] = new PointF(143 * scale + x, 125 * scale + y);
+            polygon[5] = new PointF(167 * scale + x, 197 * scale + y);
+            polygon[6] = new PointF(103 * scale + x, 152 * scale + y);
+            polygon[7] = new PointF(40 * scale + x, 196 * scale + y);
+            polygon[8] = new PointF(63 * scale + x, 123 * scale + y);
+            polygon[9] = new PointF(0 * scale + x, 77 * scale + y);
+
+            formGraphics.DrawPolygon(drawBrush, polygon);
         }
     }
 }
