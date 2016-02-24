@@ -114,7 +114,7 @@ namespace DrawingStarMethod
         {
             // TODO create FillStar code here similar to DrawStar code but using FillPolygon instead
             float scale = pixels / 207;
-            SolidBrush Draw
+            Graphics formGraphics = this.CreateGraphics();
 
             PointF[] polygon = new PointF[10];
             polygon[0] = new PointF(80 * scale + x, 77 * scale + y);
@@ -127,8 +127,8 @@ namespace DrawingStarMethod
             polygon[7] = new PointF(40 * scale + x, 196 * scale + y);
             polygon[8] = new PointF(63 * scale + x, 123 * scale + y);
             polygon[9] = new PointF(0 * scale + x, 77 * scale + y);
+            formGraphics.FillPolygon(drawBrush, polygon);
 
-            formGraphics.DrawPolygon(drawBrush, polygon);
         }
     }
 }
